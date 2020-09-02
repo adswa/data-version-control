@@ -16,17 +16,17 @@ train:
   - path: data/prepared/train.csv
     md5: 777fff3da6fd7b10d63a731a526d0693
   - path: src/train.py
-    md5: 8afd0b487365179d1b8bcca7e57a64cd
+    md5: b6cf709c5a4fbf9d9152a85546f08c1e
   outs:
   - path: model/model.joblib
-    md5: 507597bc708122d6dd7e0a4796432a4a
+    md5: 161bdc0f85c742b588a84b5fcfd51575
 evaluate:
   cmd: python src/evaluate.py
   deps:
   - path: model/model.joblib
-    md5: 507597bc708122d6dd7e0a4796432a4a
+    md5: 161bdc0f85c742b588a84b5fcfd51575
   - path: src/evaluate.py
     md5: b197277667d6269271fff4ae4af8a941
   outs:
   - path: metrics/accuracy.json
-    md5: d4cf73d17677921236566d03aeea435d
+    md5: 0cd794424501514dd090fcc82fa16064
